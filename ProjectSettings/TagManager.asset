@@ -3,16 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - TutorialRequirement
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Player
-  - Projectile
+  - 
+  - 
   - 
   - 
   - 
@@ -38,21 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 349023673
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Main
-    uniqueID: 32234053
-    locked: 0
-  - name: Character
-    uniqueID: 1627117393
-    locked: 0
-  - name: Foreground
-    uniqueID: 1857078107
-    locked: 0
   m_RenderingLayers:
   - Default
-  m_MigratedRenderPipelines: []
+  - Light Layer 1
+  - Light Layer 2
+  - Light Layer 3
+  - Light Layer 4
+  - Light Layer 5
+  - Light Layer 6
+  - Light Layer 7
