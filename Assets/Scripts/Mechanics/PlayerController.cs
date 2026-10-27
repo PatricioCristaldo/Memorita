@@ -44,9 +44,10 @@ namespace Platformer.Mechanics
         private InputAction m_MoveAction;
         private InputAction m_JumpAction;
         private InputAction m_CrouchAction;
+        private InputAction m_Punch;
 
         public Bounds Bounds => collider2d.bounds;
-
+        public PunchDetector punchDetector; 
         void Awake()
         {
             health = GetComponent<Health>();
@@ -58,10 +59,11 @@ namespace Platformer.Mechanics
             m_MoveAction = InputSystem.actions.FindAction("Player/Move");
             m_JumpAction = InputSystem.actions.FindAction("Player/Jump");
             m_CrouchAction = InputSystem.actions.FindAction("Player/Crouch");
-            
+            m_Punch = InputSystem.actions.FindAction("Player/Punch");
             m_MoveAction.Enable();
             m_JumpAction.Enable();
             m_CrouchAction.Enable();
+            m_Punch.Enable();
         }
 
         protected override void Update()
@@ -83,6 +85,9 @@ namespace Platformer.Mechanics
                 else{
                     transform.localScale = new Vector3(1, 1, 1);
                 }
+
+            punchDetector.Punch(m_Punch.IsPressed());
+
             }
             else
             {
